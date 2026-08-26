@@ -1,4 +1,4 @@
-package LamQuenJava;
+package Contest1_LamQuenJava;
 
 import java.util.Scanner;
 

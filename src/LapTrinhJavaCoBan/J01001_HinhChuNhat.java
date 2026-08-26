@@ -11,6 +11,13 @@ public class J01001_HinhChuNhat
         int y = sc.nextInt();
         long chuVi = (x + y) * 2;
         long dienTich = x * y;
-        System.out.println(chuVi + " " +  dienTich);
+        if (x <= 0 || y <= 0)
+        {
+            System.out.println(0);
+        }
+        else
+        {
+            System.out.println(chuVi + " " +  dienTich);
+        }
 	}
 }

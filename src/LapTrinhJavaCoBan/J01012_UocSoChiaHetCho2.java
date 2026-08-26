@@ -4,28 +4,56 @@ import java.util.Scanner;
 
 public class J01012_UocSoChiaHetCho2
 {
-    public static int demUocSoChiaHetCho2(int n)
+    public static long demUocSoChiaHetCho2(long n)
     {
-        int cnt = 0;
-        for (int i = 1; i <= n; i++)
+        if (n % 2 != 0)
+        {
+            return 0;
+        }
+
+        long k = 0;
+
+        while (n % 2 == 0)
+        {
+            n /= 2;
+            k++;
+        }
+
+        long cnt = 1;
+
+        for (long i = 3; i * i <= n; i += 2)
         {
             if (n % i == 0)
             {
-                if (i % 2 == 0)
+                long mu = 0;
+
+                while (n % i == 0)
                 {
-                    cnt++;
+                    n /= i;
+                    mu++;
                 }
+
+                cnt *= (mu + 1);
             }
         }
-        return cnt;
+
+        if (n > 1)
+        {
+            cnt *= 2;
+        }
+
+        return k * cnt;
     }
+
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
+
         int t = sc.nextInt();
+
         while (t-- > 0)
         {
-            int n = sc.nextInt();
+            long n = sc.nextLong();
             System.out.println(demUocSoChiaHetCho2(n));
         }
     }

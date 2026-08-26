@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class J01011_BoiSoChungUocSoChung
 {
-    public static int gcd (int a, int b)
+    public static long gcd (long a, long b)
     {
         while (b != 0)
         {
-            int r = a % b;
+            long r = a % b;
             a = b;
             b = r;
         }
         return a;
     }
-    public static int lcm (int a, int b)
+    public static long lcm (long a, long b)
     {
         return (a * b) / gcd(a, b);
     }
@@ -24,10 +24,10 @@ public class J01011_BoiSoChungUocSoChung
         int t = sc.nextInt();
         while (t-- > 0)
         {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int gcd = gcd(a, b);
-            int lcm = lcm(a, b);
+            long a = sc.nextLong();
+            long b = sc.nextLong();
+            long gcd = gcd(a, b);
+            long lcm = lcm(a, b);
             System.out.println(lcm + " " + gcd);
         }
     }

@@ -10,7 +10,7 @@ public class J01002_TinhTongNSoNguyenDuongDauTien
         int t = sc.nextInt();
         while(t-- > 0)
         {
-            int n = sc.nextInt();
+            long n = sc.nextLong();
             long tong = (n * (n + 1)) / 2;
             System.out.println(tong);
         }

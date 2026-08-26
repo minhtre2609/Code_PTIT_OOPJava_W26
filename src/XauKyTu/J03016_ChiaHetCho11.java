@@ -1,4 +1,4 @@
-package LapTrinhJavaCoBan;
+package XauKyTu;
 
 import java.util.Scanner;
 
